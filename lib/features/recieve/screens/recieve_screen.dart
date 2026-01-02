@@ -76,15 +76,18 @@ class _RecieveScreenState extends State<RecieveScreen> {
                     to: "0x1234...5678abcd",
                     amount: _amountValue,
                     note: _noteController.text.trim(),
+                    expiredAt: DateTime.now()
+                        .add(const Duration(minutes: 15))
+                        .microsecondsSinceEpoch,
                   );
-
-                  final qrData = payload.toJson();
 
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                          QrDisplayScreen(qrData: qrData, amount: _amountValue),
+                      builder: (context) => QrDisplayScreen(
+                        qrData: payload.toJson(),
+                        amount: _amountValue,
+                      ),
                     ),
                   );
                 },
