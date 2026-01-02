@@ -9,7 +9,9 @@ class NoteCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CardContainer(child: Column(children: [_header(), _input()]));
+    return CardContainer(
+      child: Column(children: [_header(), SizedBox(height: 10), _input()]),
+    );
   }
 
   Widget _header() => Row(

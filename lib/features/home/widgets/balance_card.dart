@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:idrx_paylink/utils/amount_formatter.dart';
 import 'package:idrx_paylink/widgets/card_container.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 class BalanceCard extends StatefulWidget {
-  final String balance;
+  final int balance;
 
   const BalanceCard({super.key, required this.balance});
 
@@ -56,7 +57,7 @@ class _BalanceCardState extends State<BalanceCard> {
               ),
               const SizedBox(width: 8),
               Text(
-                _showBalance ? widget.balance : "•••••",
+                _showBalance ? AmountFormatter.format(widget.balance) : "•••••",
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,

@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Text("Crypto Payment Made Easy", style: TextStyle(fontSize: 14)),
               SizedBox(height: 20),
-              BalanceCard(balance: "2.400.000"),
+              BalanceCard(balance: 2400000),
               SizedBox(height: 20),
               Text(
                 "Payment Action",

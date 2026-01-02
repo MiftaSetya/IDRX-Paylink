@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:idrx_paylink/utils/amount_formatters.dart';
+import 'package:idrx_paylink/utils/amount_input_formatter.dart';
 import 'package:idrx_paylink/widgets/card_container.dart';
 
 class AmountCard extends StatelessWidget {
   final TextEditingController controller;
-  
+
   const AmountCard({super.key, required this.controller});
 
   @override
@@ -41,9 +40,7 @@ class AmountCard extends StatelessWidget {
           border: InputBorder.none,
           isCollapsed: true,
         ),
-        inputFormatters: <TextInputFormatter>[
-          CustomThousandSeparatorFormatter()
-        ],
+        inputFormatters: [AmountInputFormatter()],
       ),
       SizedBox(height: 25),
       Container(
