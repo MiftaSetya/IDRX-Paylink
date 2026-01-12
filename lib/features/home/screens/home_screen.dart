@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:idrx_paylink/features/home/widgets/action_button.dart';
 import 'package:idrx_paylink/features/home/widgets/balance_card.dart';
+import 'package:idrx_paylink/features/pay/screens/pay_screen.dart';
 import 'package:idrx_paylink/features/recieve/screens/recieve_screen.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
@@ -58,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const RecieveScreen(),
+                          builder: (context) => const PayScreen(),
                         ),
                       );
                     },
